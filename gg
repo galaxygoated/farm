@@ -1,0 +1,20 @@
+local Player = game.Players.LocalPlayer
+local Whitelisted = {
+    "LiterallGalaxy"
+}
+if table.find(Whitelisted,Player.Name) then
+while true do
+wait(0.6)
+   for i,v in pairs (workspace.Trinkets:GetChildren()) do
+if v:FindFirstChild("ClickPart") then
+  Player.Character.HumanoidRootPart.CFrame = v.CFrame
+  fireclickdetector(v.ClickPart.ClickDetector)
+    end
+end
+end
+else
+    Player.Character:Destroy()
+end
+Player.Backpack.ChildAdded:Connect(function(Added)
+    print("Picked Up "..Added.Name)
+    end)
