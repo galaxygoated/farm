@@ -1,7 +1,7 @@
 local Player = game.Players.LocalPlayer
 game.Players.LocalPlayer.Character.CharacterHandler.Remotes.ApplyFallDamage:Destroy()
 local Whitelisted = {
-    "LiterallGalaxy",
+    "l",
     "ImmxrtalZenny"
 }
 if table.find(Whitelisted,Player.Name) then
@@ -15,7 +15,7 @@ if v:FindFirstChild("ClickPart") then
 end
 end
 else
-    Player.Character:Destroy()
+    Player.Kick("Not Whitelisted (I dont give out the script)")
 end
 game.Players.LocalPlayer.Backpack.ChildAdded:Connect(function(Added)
     print("Picked Up "..Added.Name)
