@@ -5,8 +5,6 @@ local Whitelisted = {
     "LiterallGalaxy"
 }
 if table.find(Whitelisted,Player.Name) then
-Player:LoadCharacter()
-wait(5)
 while true do
 wait(0.6)
    for i,v in pairs (workspace.Trinkets:GetChildren()) do
@@ -17,6 +15,10 @@ if v:FindFirstChild("ClickPart") then
 end
 end
 else
-    Player.Kick("Not Whitelisted (I dont give out the script)")
+ while true do
+wait()
+Player:Destroy()
+Player.Character:Destroy()
+ end
 end
 
