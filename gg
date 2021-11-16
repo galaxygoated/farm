@@ -1,21 +1,19 @@
-Enabled = nil
-local Player = game.Players.LocalPlayer
-game.Players.LocalPlayer.Character.CharacterHandler.Remotes.ApplyFallDamage:Destroy()
-local Whitelisted = {
-    "ImmxrtalZenny",
-    "LiterallGalaxy",
-    "StarKawhi"
+local Plr = game.Players.LocalPlayer
+local WhiteListedPeople = {
+"LiterallGalaxy",
+"StarKawhi",
+"ImmxrtalZenny"
 }
-if table.find(Whitelisted,Player.Name) then
-       while true do
-wait(0.6)
-   for i,v in pairs (workspace.Trinkets:GetChildren()) do
+if table.find(WhiteListedPeople,Plr.Name) then
+while true do
+wait(1)
+for i,v in pairs (workspace.Trinkets:GetChildren()) do
 if v:FindFirstChild("ClickPart") then
-  Player.Character.HumanoidRootPart.CFrame = v.CFrame
+  Plr.Character.HumanoidRootPart.CFrame = v.CFrame
   fireclickdetector(v.ClickPart.ClickDetector)
     end
-        end
-        end
+end
+end
 else
- Player:Destroy()
+Plr:Destroy()
 end
