@@ -1,4 +1,5 @@
 local Player = game.Players.LocalPlayer
+game.Players.LocalPlayer.Character.CharacterHandler.Remotes.ApplyFallDamage:Destroy()
 local Whitelisted = {
     "LiterallGalaxy",
     "ImmxrtalZenny"
