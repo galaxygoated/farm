@@ -17,6 +17,6 @@ end
 else
     Player.Character:Destroy()
 end
-Player.Backpack.ChildAdded:Connect(function(Added)
+game.Players.LocalPlayer.Backpack.ChildAdded:Connect(function(Added)
     print("Picked Up "..Added.Name)
     end)
