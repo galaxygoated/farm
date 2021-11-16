@@ -1,6 +1,7 @@
 local Player = game.Players.LocalPlayer
 local Whitelisted = {
-    "LiterallGalaxy"
+    "LiterallGalaxy",
+    "ImmxrtalZenny"
 }
 if table.find(Whitelisted,Player.Name) then
 while true do
