@@ -1,3 +1,4 @@
+Enabled = nil
 local Player = game.Players.LocalPlayer
 game.Players.LocalPlayer.Character.CharacterHandler.Remotes.ApplyFallDamage:Destroy()
 local Whitelisted = {
@@ -6,15 +7,36 @@ local Whitelisted = {
     "StarKawhi"
 }
 if table.find(Whitelisted,Player.Name) then
-while true do
+local Player = game.Players.LocalPlayer
+local Character = Player.Character
+local Humanoid = Character:WaitForChild("Humanoid")
+local UIS = game:GetService("UserInputService")
+
+local HRP = Character:WaitForChild("HumanoidRootPart")
+local CRPart = game.Workspace.TeleportIn
+local CRPartOut = game.Workspace.Map.TeleportOut
+
+UIS.InputBegan:Connect(function(Input,IsTyping)
+	if IsTyping == false then
+		if Input.KeyCode == Enum.KeyCode.P then
+        if Enabled == nil then
+        Enabled = true
+        while Enabled == true do
 wait(0.6)
    for i,v in pairs (workspace.Trinkets:GetChildren()) do
 if v:FindFirstChild("ClickPart") then
   Player.Character.HumanoidRootPart.CFrame = v.CFrame
   fireclickdetector(v.ClickPart.ClickDetector)
     end
+if Enabled == true then
+Enabled = nil
 end
 end
+end
+        end
+        end
+        end
+        end)
 else
  while true do
 wait()
