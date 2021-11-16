@@ -2,7 +2,8 @@ local Player = game.Players.LocalPlayer
 game.Players.LocalPlayer.Character.CharacterHandler.Remotes.ApplyFallDamage:Destroy()
 local Whitelisted = {
     "ImmxrtalZenny",
-    "LiterallGalaxy"
+    "LiterallGalaxy",
+    "StarKawhi"
 }
 if table.find(Whitelisted,Player.Name) then
 while true do
