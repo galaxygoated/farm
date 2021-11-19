@@ -7,8 +7,6 @@ local WhiteListedPeople = {
 if table.find(WhiteListedPeople,Plr.Name) then
 while true do
 wait(0.4)
-print("breh")
-if game.Workspace:FindFirstChild("CancelFarm") then return end
 for i,v in pairs (workspace.Trinkets:GetChildren()) do
 if v:FindFirstChild("ClickPart") then
   Plr.Character.HumanoidRootPart.CFrame = v.CFrame
