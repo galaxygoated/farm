@@ -5,7 +5,7 @@ local WhiteListedPeople = {
 "ImmxrtalZenny"
 }
 if table.find(WhiteListedPeople,Plr.Name) then
-while true do
+while Player.Character do
 wait(0.4)
 for i,v in pairs (workspace.Trinkets:GetChildren()) do
 if v:FindFirstChild("ClickPart") then
